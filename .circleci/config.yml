@@ -9,3 +9,4 @@ jobs:
     resource_class: logan/macos1	
     steps:
       - run: echo "Hi I'm on Runners!"
+      - run: echo "yes"
