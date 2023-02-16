@@ -11,11 +11,13 @@ jobs:
     resource_class: logan/machine-runner
     steps:
       - run: echo "Hi I'm on Runners!"
+      - run: sleep 10
   runner-test-1:
     machine: true
     resource_class: logan/machine-runner
     steps:
       - run: echo "Hi I'm on Runners!"
+      - run: sleep 20
   runner-test-2:
     machine: true
     resource_class: logan/machine-runner
