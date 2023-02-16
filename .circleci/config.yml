@@ -3,10 +3,22 @@ workflows:
   testing:
     jobs:
       - runner-test
+      - runner-test-1
+      - runner-test-2
 jobs:
   runner-test:
     machine: true
-    resource_class: logan/macos1	
+    resource_class: logan/machine-runner
     steps:
       - run: echo "Hi I'm on Runners!"
-      - run: echo "yes"
+  runner-test-1:
+    machine: true
+    resource_class: logan/machine-runner
+    steps:
+      - run: echo "Hi I'm on Runners!"
+  runner-test-2:
+    machine: true
+    resource_class: logan/machine-runner
+    steps:
+      - run: echo "Hi I'm on Runners!"
+      
