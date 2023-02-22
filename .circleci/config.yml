@@ -10,6 +10,6 @@ jobs:
     resource_class: logan/machine-runner
     steps:
       - checkout
-      - run: docker build . -t testing
+      - run: sudo docker build . -t testing
 
       
