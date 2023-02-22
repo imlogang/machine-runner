@@ -13,5 +13,5 @@ jobs:
       - run: sudo docker build . -t testing
       - run: sudo docker run --privileged -d testing
       - run: sudo docker ps -a
-
+      - run: sudo docker inspect --format='{{.HostConfig.Privileged}}' 4a83b454462a
       
