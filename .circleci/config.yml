@@ -3,15 +3,10 @@ workflows:
   testing:
     jobs:
       - runner-test
-      
 jobs:
   runner-test:
     machine: true
-    resource_class: logan/machine-runner
+    resource_class: logan/gpu-runner
     steps:
-      - checkout
-      - run: sudo docker build . -t testing
-      - run: sudo docker run --privileged -d testing
-      - run: sudo docker ps -a
-      - run: sudo docker inspect --format='{{.HostConfig.Privileged}}' 4a83b454462a
-      
+      - run: echo "Hi I'm on Runners!"
+      - run: nvidia-smi 
