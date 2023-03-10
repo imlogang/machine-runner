@@ -8,6 +8,7 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           repo: new_testing
+          region: 'us-east-1'
 
       
       
