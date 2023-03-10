@@ -3,12 +3,20 @@ version: 2.1
 orbs:
   aws-ecr: circleci/aws-ecr@8.2.1
 
-workflows:
-  build_and_push_image:
-    jobs:
+jobs:
+  build-and-push:
+    machine: true
+    resource_class: logan/machine-runner
+    steps:
       - aws-ecr/build-and-push-image:
           repo: new_testing
           region: 'us-east-1'
+          
+workflows:
+  build_and_push_image:
+    jobs:
+      - build-and-push
+
 
       
       
