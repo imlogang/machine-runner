@@ -1,2 +1,2 @@
 FROM ubuntu:latest
-RUN apt-get update -y
+RUN sudo apt-get update -y
