@@ -16,5 +16,5 @@ jobs:
     shell: powershell.exe
     steps:
       - checkout
-
+      - run: echo $HOME
       
