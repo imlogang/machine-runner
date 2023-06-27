@@ -17,4 +17,5 @@ jobs:
     steps:
       - checkout
       - run: echo $HOME
+      - run: ls $HOME\appdata\AppData\Local\Temp
       
