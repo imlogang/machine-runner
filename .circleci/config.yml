@@ -8,7 +8,6 @@ jobs:
   runner-test:
     machine: true
     resource_class: logan/machine-runner
-    docker_layer_caching: true
     steps:
       - checkout
       
