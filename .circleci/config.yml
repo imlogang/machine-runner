@@ -17,7 +17,7 @@ jobs:
     steps:
       - run:
           name: List files
-          command: ls \mnt\d\TestsFolder
+          command: ls D:\asd
       - persist_to_workspace:
           root: D:\
           paths:
