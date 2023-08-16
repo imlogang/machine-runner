@@ -19,7 +19,7 @@ jobs:
           name: List files
           command: ls D:\asd
       - persist_to_workspace:
-          root: .
+          root: D:\asd\
           paths:
-            - asd\*
+            - .
       
