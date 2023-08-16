@@ -15,7 +15,11 @@ jobs:
     resource_class: logan/windows-runner
     shell: powershell.exe
     steps:
-      - checkout
-      - run: echo $HOME
-      - run: ls $HOME\AppData\Local\Temp
+      - run:
+          name: List files
+          command: ls \mnt\d\TestsFolder
+      - persist_to_workspace:
+          root: D:\
+          paths:
+            - \mnt\d\TestsFolder
       
