@@ -6,12 +6,10 @@ orbs:
 jobs:
   build-and-push:
     machine: true
-    resource_class: logan/machine-runner
+    resource_class: logan/docker
     steps:
-      - aws-ecr/build-and-push-image:
-          repo: new_testing
-          region: 'us-east-1'
-          
+      - run: echo "hello"
+      
 workflows:
   build_and_push_image:
     jobs:
