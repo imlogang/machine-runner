@@ -16,10 +16,11 @@ jobs:
     shell: powershell.exe
     steps:
       - run:
-          name: List files
-          command: ls asd
-      - persist_to_workspace:
-          root: D:\asd\
-          paths:
-            - .
-      
+         command: $(echo hello | Out-Host; $?) -and $(echo world | Out-Host; $?)
+         shell: powershell.exe
+      - run:
+         command: echo hello && echo world
+         shell: bash.exe
+      - run:
+         command: echo hello & echo world
+         shell: cmd.exe
