@@ -11,12 +11,8 @@ jobs:
     resource_class: logan/windows-runner
     steps:
       - checkout # checkout code
-      - run: # run a command
-          name: Generate config
-          command: |
-            python3 ./generate-config.py > generated_config.yml
       - continuation/continue:
-          configuration_path: generated_config.yml # use newly generated config to continue
+          configuration_path: .circleci/continue_config.yml # use newly generated config to continue
 
 # our single workflow, that triggers the setup job defined above
 workflows:
