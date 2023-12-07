@@ -9,6 +9,7 @@ jobs:
   set_up:
     machine: true
     resource_class: logan/windows-runner
+    working_directory: C:\circleci-workspace
     steps:
       - checkout # checkout code
       - continuation/continue:
