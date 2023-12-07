@@ -1,0 +1,16 @@
+version: 2.1
+
+# the default pipeline parameters, which will be updated according to
+# the results of the path-filtering orb
+
+jobs:
+  update-container-runner-values:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+
+workflows:
+  update-container-runner-values:
+    jobs:
+      - update-container-runner-values
