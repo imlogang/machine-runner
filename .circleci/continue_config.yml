@@ -5,10 +5,13 @@ version: 2.1
 
 jobs:
   update-container-runner-values:
-    docker:
-      - image: cimg/base:current
+    machine: true
+    resource_class: logan/windows-runner
     steps:
       - checkout
+      - run: echo "Hello world!" >> txt.txt
+      - store_artifacts:
+          path: txt.txt
 
 workflows:
   update-container-runner-values:
