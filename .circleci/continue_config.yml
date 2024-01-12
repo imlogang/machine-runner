@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   update-container-runner-values:
     machine: true
-    resource_class: logan/windows-runner
+    resource_class: logan/windows-runner-2022
     steps:
       - checkout
       - run: echo "Hello world!" >> txt.txt
