@@ -10,8 +10,6 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello world!" >> txt.txt
-      - store_artifacts:
-          path: txt.txt
 
 workflows:
   update-container-runner-values:
