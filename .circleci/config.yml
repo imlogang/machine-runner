@@ -4,7 +4,7 @@ jobs:
     machine: true
     resource_class: logan/aws-machine-runner
     steps:
-      - run: echo "Hi I'm on a Container Runner!"
+      - run: echo "Hi I'm on a Container Rr!"
 workflows:
   build-workflow:
     jobs:
