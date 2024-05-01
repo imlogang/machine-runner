@@ -1,13 +1,12 @@
 version: 2.1
-workflows:
-  testing:
-    jobs:
-      - runner-test
-      
 jobs:
-  runner-test:
-    machine: true
-    resource_class: logan/machine-runner
+  build:
+    docker:
+      - image: cimg/base:current
+    resource_class: undefined
     steps:
-      - checkout
-      
+      - run: echo "Hi I'm on a Container Runner!"
+workflows:
+  build-workflow:
+    jobs:
+      - build
