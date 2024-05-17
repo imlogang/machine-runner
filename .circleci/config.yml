@@ -2,9 +2,10 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/aws-machine-runner
+    parallelism: 4
+    resource_class: logan/windows-runner-aws-2019
     steps:
-      - run: echo "Hi I'm on a Container Rr!"
+      - run: echo "This is being run multiple times!"
 workflows:
   build-workflow:
     jobs:
