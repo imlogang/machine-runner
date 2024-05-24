@@ -2,8 +2,7 @@ version: 2.1
 jobs:
   build:
     machine: true
-    parallelism: 4
-    resource_class: logan/windows-runner-aws-2019
+    resource_class: logan/machine-runner
     steps:
       - run: echo "This is being run multiple times!"
 workflows:
