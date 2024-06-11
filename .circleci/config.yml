@@ -4,7 +4,7 @@ jobs:
     machine: true
     resource_class: logan/machine-runner
     steps:
-      - run: echo "This is being run multiple times!"
+      - run: whoami
 workflows:
   build-workflow:
     jobs:
