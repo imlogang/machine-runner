@@ -5,7 +5,7 @@ jobs:
     resource_class: logan/machine-runner
     steps:
       - run: whoami
-      - run: sudo mkdir test-results
+      - run: mkdir test-results
 workflows:
   build-workflow:
     jobs:
