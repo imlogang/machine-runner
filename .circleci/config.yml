@@ -6,6 +6,8 @@ jobs:
     steps:
       - run: whoami
       - run: mkdir test-results
+      - run: sudo apt-get update && sudo apt-get install speedtest-cli
+      - run: sudo mkdir test-results
 workflows:
   build-workflow:
     jobs:
