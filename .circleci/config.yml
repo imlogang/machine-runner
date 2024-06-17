@@ -10,7 +10,7 @@ jobs:
             dotnet tool install -g trx2junit &&
             echo 'export PATH="$PATH:/root/.dotnet/tools"' >> $BASH_ENV
           fi
-      - run: echo 'export PATH="$PATH:/home/.dotnet/tools"' >> "$BASH_ENV"
+      - run: echo 'export PATH="$PATH:/home/circleci/.dotnet/tools"' >> "$BASH_ENV"
       - run: echo $PATH
       - run: dotnet tool list --global
       - run: echo $BASH_ENV
