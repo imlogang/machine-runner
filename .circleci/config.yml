@@ -8,11 +8,9 @@ jobs:
           sudo apt-get update && \
             sudo apt-get install -y dotnet-sdk-8.0
       - run: |
-          if [[ "$(dotnet tool list --global)" != *"trx2junit"* ]]; then
             echo "Installing trx2junit"
             dotnet tool install -g trx2junit &&
             echo 'export PATH="$PATH:/root/.dotnet/tools"' >> $BASH_ENV
-          fi
       - run: dotnet tool list --global
       - run: echo $BASH_ENV
       - run: trx2junit --help
