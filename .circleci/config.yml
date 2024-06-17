@@ -4,10 +4,13 @@ jobs:
     machine: true
     resource_class: logan/machine-runner
     steps:
-      - run: whoami
-      - run: mkdir test-results
-      - run: sudo apt-get update && sudo apt-get install speedtest-cli
-      - run: sudo mkdir test-results
+      - run: |
+          if [[ "$(dotnet tool list --global)" != *"trx2junit"* ]]; then
+            echo "Installing trx2junit"
+            dotnet tool install -g trx2junit &&
+            echo 'export PATH="$PATH:/root/.dotnet/tools"' >> $BASH_ENV
+          fi
+      - run: dotnet tool list --global
 workflows:
   build-workflow:
     jobs:
