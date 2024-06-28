@@ -4,17 +4,7 @@ jobs:
     machine: true
     resource_class: logan/machine-runner
     steps:
-      - run: |
-          if [[ "$(dotnet tool list --global)" != *"trx2junit"* ]]; then
-            echo "Installing trx2junit"
-            dotnet tool install -g trx2junit &&
-            echo 'export PATH="$PATH:/root/.dotnet/tools"' >> $BASH_ENV
-          fi
-      - run: echo 'export PATH="$PATH:/home/circleci/.dotnet/tools"' >> "$BASH_ENV"
-      - run: echo $PATH
-      - run: dotnet tool list --global
-      - run: echo $BASH_ENV
-      - run: trx2junit --help
+      - run: sleep 10000
 workflows:
   build-workflow:
     jobs:
