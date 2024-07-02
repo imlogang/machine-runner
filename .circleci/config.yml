@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/machine runner
+    resource_class: logan/machine-runner
     steps:
       - run: nvm 
 workflows:
