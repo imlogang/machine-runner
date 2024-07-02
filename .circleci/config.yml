@@ -5,7 +5,7 @@ jobs:
     resource_class: logan/machine-runner
     steps:
       - run: echo $PATH
-      - run: ls /home/circleci/.nvm
+      - run: ls -la /home/circleci/.nvm
       #- run: echo 'export PATH="$HOME/.nvm:$HOME/.nvm/nvm.sh:$PATH"' >> "$BASH_ENV"
       #- run: |
       #    export NVM_DIR="$HOME/.nvm"
