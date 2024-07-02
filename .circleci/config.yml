@@ -5,7 +5,10 @@ jobs:
     resource_class: logan/machine-runner
     steps:
       - run: echo $HOME
-      - run: echo 'export PATH="$HOME/.nvm:$PATH"' >> $BASH_ENV
+      - run: echo 'export PATH="$HOME/.nvm:$HOME/.nvm/nvm.sh:$PATH"' >> $BASH_ENV
+      - run: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
       #- run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
       #- run: |
