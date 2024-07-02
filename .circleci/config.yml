@@ -2,9 +2,9 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/aws-machine-runner
+    resource_class: logan/machine runner
     steps:
-      - run: echo "Hi I'm on a Container Rr!"
+      - run: nvm 
 workflows:
   build-workflow:
     jobs:
