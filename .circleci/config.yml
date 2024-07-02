@@ -6,6 +6,7 @@ jobs:
     steps:
       - run: echo $HOME
       - run: echo $PATH
+      - run: cd /home/ubuntu/nvm
       #- run: echo 'export PATH="$HOME/.nvm:$HOME/.nvm/nvm.sh:$PATH"' >> "$BASH_ENV"
       #- run: |
       #    export NVM_DIR="$HOME/.nvm"
