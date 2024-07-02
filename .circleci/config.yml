@@ -5,10 +5,13 @@ jobs:
     resource_class: logan/machine-runner
     steps:
       - run: echo $HOME
+      #- run: |
+      #    export NVM_DIR="/home/ubuntu/.nvm"
+      #    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+      #    nvm
       - run: |
-          export NVM_DIR="/home/ubuntu/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-          nvm 
+          source ~/.bashrc
+          nvm
 workflows:
   build-workflow:
     jobs:
