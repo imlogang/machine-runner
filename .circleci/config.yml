@@ -4,6 +4,7 @@ jobs:
     machine: true
     resource_class: logan/machine-runner
     steps:
+      - run: echo $HOME
       - run: |
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
