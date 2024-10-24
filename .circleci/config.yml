@@ -15,7 +15,6 @@ jobs:
           configuration_path: .circleci/continue_config.yml # use newly generated config to continue
       - run: echo "random commit bc i forgot jq" 
 
-# our single workflow, that triggers the setup job defined above
 workflows:
   setup:
     jobs:
