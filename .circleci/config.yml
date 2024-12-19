@@ -2,9 +2,9 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/aws-machine-runner-test
+    resource_class: logan/machine-runner-test
     steps:
-      - run: echo "Hi I'm on a Container Rr!"
+      - run: echo $PATH
 workflows:
   build-workflow:
     jobs:
