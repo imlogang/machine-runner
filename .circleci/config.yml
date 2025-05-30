@@ -8,7 +8,7 @@ orbs:
 jobs:
   set_up:
     machine: true
-    resource_class: logan/windows-runner-2022
+    resource_class: logan/windows-runner
     steps:
       - checkout # checkout code
       - continuation/continue:
