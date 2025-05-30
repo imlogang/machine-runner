@@ -16,7 +16,6 @@ jobs:
     resource_class: logan/windows-runner
     steps:
       - checkout
-      - run: echo "Hello world!" >> txt.txt
       - attach_workspace:
           at: .
       - run: cat txt.txt
