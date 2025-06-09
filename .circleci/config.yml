@@ -2,10 +2,20 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/machine-runner-test
+    resource_class: logan/windows-single-task
     steps:
-      - run: echo $PATH
+      - checkout
+      - run: echo "This is 1 task!"
+  build-v2:
+    machine: true
+    resource_class: logan/windows-single-task
+    steps:
+      - checkout
+      - run: echo "This is the second task!"
 workflows:
   build-workflow:
     jobs:
       - build
+      - build-v2:
+          requires:
+            - build
