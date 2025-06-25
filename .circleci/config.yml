@@ -2,9 +2,10 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/machine-runner-test
+    parallelism: 6
+    resource_class: logan/windows-asg
     steps:
-      - run: echo $PATH
+      - run: echo IT WORKS!
 workflows:
   build-workflow:
     jobs:
