@@ -5,6 +5,7 @@ jobs:
     parallelism: 10
     resource_class: logan/runner-provisioner-test
     steps:
+      - run: sleep 120
       - run: echo IT WORKS!
 workflows:
   build-workflow:
