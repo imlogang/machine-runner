@@ -2,8 +2,8 @@ version: 2.1
 jobs:
   build:
     machine: true
-    parallelism: 6
-    resource_class: logan/windows-asg
+    parallelism: 10
+    resource_class: logan/runner-provisioner-test
     steps:
       - run: echo IT WORKS!
 workflows:
