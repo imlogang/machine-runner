@@ -2,8 +2,8 @@ version: 2.1
 jobs:
   build:
     machine: true
-    parallelism: 30
-    resource_class: logan/runner-provisioner-test
+    parallelism: 3
+    resource_class: logan/runner-provisioner-testing-local
     steps:
       - run: sleep 120
       - run: echo IT WORKS!
