@@ -2,11 +2,12 @@ version: 2.1
 jobs:
   build:
     machine: true
-    parallelism: 30
-    resource_class: logan/runner-provisioner-test
+    resource_class: logan/windows-runner-test-arm64
     steps:
-      - run: sleep 120
-      - run: echo IT WORKS!
+      - run: (Get-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" -Name PROCESSOR_ARCHITECTURE).PROCESSOR_ARCHITECTURE
+      - run: $env:PROCESSOR_ARCHITECTURE
+      - run: (Get-CimInstance Win32_OperatingSystem).OSArchitecture
+      - run: echo "This is on Windows ARM!"
 workflows:
   build-workflow:
     jobs:
