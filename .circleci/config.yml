@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     machine: true
-    resource_class: logan/windows-runner-test-arm64
+    resource_class: logan/windows-runner-arm64
     shell: powershell.exe
     steps:
       - run: (Get-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" -Name PROCESSOR_ARCHITECTURE).PROCESSOR_ARCHITECTURE
